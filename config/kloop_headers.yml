@@ -42,7 +42,7 @@ pipeline:
           - pattern: 'https://kloop.kg/blog/'
     handle:
       # this makes it a recursive web crawler:
-      pass: extractdata
+      store: extractdata
       fetch: fetch
   
   extractdata:
