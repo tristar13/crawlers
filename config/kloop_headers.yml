@@ -17,7 +17,7 @@ pipeline:
     method: seed
     params:
       urls:
-        - http://kloop.kg
+        - https://kloop.kg/
     handle:
       pass: fetch
 
@@ -28,8 +28,9 @@ pipeline:
       # These rules specify which pages should be scraped or included:
       rules:
         or:
-          - pattern: 'https://kloop.kg/blog/$'
-          - pattern: 'https://kloop.kg/page/$'
+          - pattern: 'https://kloop.kg/$'
+          - pattern: 'https://kloop.kg/blog/'
+          - pattern: 'https://kloop.kg/page/'
     handle:
       pass: parse
 
