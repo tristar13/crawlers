@@ -39,7 +39,7 @@ pipeline:
     params:
       store:
         and:
-          - pattern: 'https://kloop.kg/blog/$'
+          - pattern: 'https://kloop.kg/blog/'
     handle:
       # this makes it a recursive web crawler:
       pass: extractdata
