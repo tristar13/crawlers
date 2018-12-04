@@ -13,9 +13,7 @@ def extractdata(context, data):
     article_data = {
         "url": response.url,
         "header": header,
-		
-		
-    }
+	  }
 
     if article_data["header"] is not None:
         # If 'rule' is not set, it defaults to 'pass', which triggers the
