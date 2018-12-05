@@ -7,7 +7,7 @@ def extractdata(context, data):
 
     # Parse the rest of the page to extract structured data.
 
-    header = _gettext(page.xpath('.//header/h1/text()'))
+    header = _gettext(page.xpath('.//h1/text()'))
 	
 
     article_data = {
