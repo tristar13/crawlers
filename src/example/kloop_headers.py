@@ -1,3 +1,5 @@
+import re
+
 def extractdata(context, data):
     # This stage comes after 'fetch' so the 'data' input contains an
     # HTTPResponse object.

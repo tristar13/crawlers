@@ -54,8 +54,6 @@ def parse_html(context, data, result):
                     continue
                 context.set_tag(tag, None)
                 data = {'url': url}
-                print("----------------PRINTING URL----------------")
-                print(url)
                 # Option to set the document title from the link text.
                 if context.get('link_title', False):
                     data['title'] = collapse_spaces(element.text_content())
@@ -63,7 +61,10 @@ def parse_html(context, data, result):
                     data['title'] = collapse_spaces(element.get('title'))
 
                 context.http.session.headers['Referer'] = url
-                context.emit(rule='fetch', data=data)
+                if  re.findall('publicId|firstResult', url, flags=0)
+                    print("----------------PRINTING URL----------------")
+                    print(url)¶
+                    context.emit(rule='fetch', data=data)
 
 
 def parse_for_metadata(context, data, html):
