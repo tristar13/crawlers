@@ -8,15 +8,14 @@ def extractdata(context, data):
     # Parse the rest of the page to extract structured data.
 
     header = _gettext(page.xpath('.//header/h1/text()'))
-	xtext = _gettext(text.xpath('.//p[@class='stk-reset']/text()'))
-	picture = _gettext(picture.xpath('(.//div[@class="stk-mask"]/img/@src)[1]')) 
+    xtext = _gettext(pageage.xpath('.//p[@class='stk-reset']/text()'))
+    picture = _gettext(page.xpath('(.//div[@class="stk-mask"]/img/@src)[1]')) 
 
     article_data = {
         "url": response.url,
         "header": header,
 		"xtext": xtext,
 		"picture": picture
-		
     }
 
     if article_data["header"] is not None:
