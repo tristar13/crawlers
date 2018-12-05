@@ -16,6 +16,7 @@ def extractdata(context, data):
 		"picture": picture
     }
 
+
     if article_data["header"] is not None:
         # If 'rule' is not set, it defaults to 'pass', which triggers the
         # final 'store' stage.
