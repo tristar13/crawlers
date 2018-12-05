@@ -34,13 +34,7 @@ pipeline:
 
   parse:
     # Parse the scraped pages to find if they contain additional links.
-    method: parse
-    params:
-      include_paths:
-        - './/*[@id="nextPage"]'
-      store:
-        and:
-          - pattern: 'Public.seam?publicId'
+    method: example.kg_minjust_parse:parse
     handle:
       # this makes it a recursive web crawler:
       store: extractdata
