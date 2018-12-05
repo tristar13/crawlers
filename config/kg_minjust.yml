@@ -26,6 +26,9 @@ pipeline:
     method: fetch
     params:
       # These rules specify which pages should be scraped or included:
+      rules:
+        or:
+          - pattern: 'register.minjust.gov.kg'
     handle:
       pass: parse
 
