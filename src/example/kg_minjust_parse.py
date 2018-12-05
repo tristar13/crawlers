@@ -61,7 +61,7 @@ def parse_html(context, data, result):
                     data['title'] = collapse_spaces(element.get('title'))
 
                 context.http.session.headers['Referer'] = url
-                if  re.findall('publicId|firstResult', url, flags=0)
+                if  re.findall('publicId|firstResult', url):
                     print("----------------PRINTING URL----------------")
                     print(url)¶
                     context.emit(rule='fetch', data=data)
