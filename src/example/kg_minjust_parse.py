@@ -63,7 +63,7 @@ def parse_html(context, data, result):
                 context.http.session.headers['Referer'] = url
                 if  re.findall('publicId|firstResult', url):
                     print("----------------PRINTING URL----------------")
-                    print(url)¶
+                    print(url)
                     context.emit(rule='fetch', data=data)
 
 
