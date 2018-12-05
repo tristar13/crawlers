@@ -8,6 +8,8 @@ from memorious.helpers.rule import Rule
 from memorious.helpers.dates import iso_date
 from memorious.util import make_key
 
+import re
+
 
 log = logging.getLogger(__name__)
 URL_TAGS = [('.//a', 'href'),
