@@ -1,10 +1,10 @@
 # Scraper for the OCCRP web site.
 # The goal is not to download all HTML, but only PDFs & other documents
 # linked from the page as proof.
-name: kg_kloop_headers
+name: kg_vb_headers
 
 # A title for display in the UI:
-description: 'Headers from articles on Kloop.kg'
+description: 'Headers from articles on vb.kg'
 
 # Uncomment to run this scraper automatically:
 schedule: monthly
@@ -12,12 +12,13 @@ delay: 1
 stealthy: true
 pipeline:
 
+
   init:
     # This first stage will get the ball rolling with a seed URL.
     method: seed
     params:
       urls:
-        - https://kloop.kg/page/2/
+        - https://www.vb.kg/
     handle:
       pass: fetch
 
@@ -29,8 +30,8 @@ pipeline:
       # These rules specify which pages should be scraped or included:
       rules:
         or:
-          - pattern: 'https://kloop.kg/blog/'
-          - pattern: 'https://kloop.kg/page/2/$'
+          - pattern: 'https://www.vb.kg/doc/'
+          - pattern: 'https://www.vb.kg/$'
     handle:
       pass: parse
 
@@ -40,7 +41,7 @@ pipeline:
     params:
       store:
         and:
-          - pattern: 'https://kloop.kg/blog/'
+          - pattern: 'https://www.vb.kg/doc/'
     handle:
       # this makes it a recursive web crawler:
       store: extractdata
@@ -48,7 +49,7 @@ pipeline:
   
   extractdata:
     # Parse the scraped pages to extract useful information
-    method: example.kloop_headers:extractdata
+    method: example.vb_headers:extractdata
     handle:
       pass: store
 
@@ -56,6 +57,6 @@ pipeline:
     # Store the crawled documents to a directory
     method: db
     params:
-      table: "kg_kloop_headers"
+      table: "kg_vb_headers"
       unique:
         - url
