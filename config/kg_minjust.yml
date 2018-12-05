@@ -36,6 +36,8 @@ pipeline:
     # Parse the scraped pages to find if they contain additional links.
     method: parse
     params:
+      include_paths:
+        - '//*[@id="nextPage"]'
       store:
         and:
           - pattern: 'Public.seam?publicId'
