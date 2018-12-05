@@ -26,13 +26,6 @@ pipeline:
     method: fetch
     params:
       # These rules specify which pages should be scraped or included:
-      rules:
-        or:
-          - pattern: 'http://register.minjust.gov.kg/register/SearchAction.seam?firstResult='
-          - pattern: 'register.minjust.gov.kg'
-          - pattern: 'register/SearchAction.seam'
-          - pattern: 'Public.seam?publicId'
-          - pattern: 'http://register.minjust.gov.kg/register/SearchAction.seam?tin=0'
     handle:
       pass: parse
 
