@@ -32,6 +32,7 @@ pipeline:
           - pattern: 'register.minjust.gov.kg'
           - pattern: 'register/SearchAction.seam'
           - pattern: 'Public.seam?publicId'
+          - pattern: 'http://register.minjust.gov.kg/register/SearchAction.seam?region=&tinEmpty=false&street=&statEmpty=false&number=&house=&tin=&logic=and&okpo=&city=&keyWord3=&keyWord4=&baseBusiness=&keyWord1=&keyWord2=&district=&fullnameRu=&chief=&room=&founder='
     handle:
       pass: parse
 
