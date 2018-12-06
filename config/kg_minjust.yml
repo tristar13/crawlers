@@ -53,7 +53,7 @@ pipeline:
     params:
       table: "kg_minjust"
       unique:
-        - url,
+        - url
         #- name_ru,
         #- full_name_kg,
         #- short_name_kg,
