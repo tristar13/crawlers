@@ -78,7 +78,7 @@ def extractdata(context, data):
     
     newdic = {}
     newdic = dict()
-    newdic ['key'] = 'value'
+    newdic ['key'] = 'key'
 	
     for key, value in org_data.items():
 	    if value is None:
