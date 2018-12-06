@@ -77,7 +77,7 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-    newdic = {"key":key}
+    newdic = {}
     newdic[key]
     
 	
