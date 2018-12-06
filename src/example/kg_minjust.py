@@ -78,7 +78,7 @@ def extractdata(context, data):
     }
     
     newdic = {}
-    newdic[key]
+    newdic[]
     
 	
     
