@@ -76,13 +76,13 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-    newdic = {}
-    newdic = dict()
-    newdic["key"] = "value"
+   # newdic = {}
+    #newdic = dict()
+    #newdic["key"] = "value"
 	
     for key, value in org_data.items():
 	    if value is None:
-             value = ''
+             value == ''
            
 	
 	
