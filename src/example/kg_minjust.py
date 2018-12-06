@@ -77,7 +77,7 @@ def extractdata(context, data):
     }
     
     for key, value in org_data.items():
-      if value == "":
+      if value == " ":
            value ='----'
            newd = {}
            newd[key]=key
