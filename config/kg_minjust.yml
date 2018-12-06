@@ -46,6 +46,7 @@ pipeline:
     handle:
       pass: store
 
+
   store:
     # Store the crawled documents to a directory
     method: db
