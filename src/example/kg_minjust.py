@@ -40,7 +40,7 @@ def extractdata(context, data):
     #participants = _gettext(page.xpath("//span[contains(text(),'31. У')]/../../following-sibling::td//text()"))
     #participant = _gettext(page.xpath("//span[contains(text(),'Учредитель')]/../../following-sibling::td//text()"))
 
-    org_data.items = {
+    org_data = {
         "url": response.url,
         "name_ru": name_ru,
 		"full_name_kg": full_name_kg,
@@ -76,15 +76,15 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-for key, value in org_data.items():
- if value == "":
-      value ='----'
-      newd = {}
-      newd[key]=key
-      newd[value]=value
+    for key, value in org_data.items():
+      if value == "":
+           value ='----'
+           newd = {}
+           newd[key]=key
+           newd[value]=value
 	
 	
-context.emit(data=org_data)
+    context.emit(data=org_data)
 
 def _gettext(list):
     if not list:
