@@ -76,12 +76,12 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-for key, value in org_data.items():
-  if value == " ":
-       value ='----'
-       newd = {}
-       newd[key]=key
-       newd[value]=value
+    for key, value in org_data.items():
+      if value == " ":
+           value ='----'
+           newd = {}
+           newd[key]=key
+           newd[value]=value
 	
 	
     context.emit(data=org_data)
