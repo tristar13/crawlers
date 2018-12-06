@@ -82,7 +82,7 @@ def extractdata(context, data):
 	
     for key, value in org_data.items():
 	    if cell.value is None:
-            value == '--'
+            value = ''
            
 	
 	
