@@ -76,11 +76,11 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-	for keys, values in org_data.items():
-		if values == Null:
-			values ='----'
+for keys, values in org_data.items():
+	if values == Null:
+		values ='----'
 	
-    context.emit(data=org_data)
+context.emit(data=org_data)
 
 def _gettext(list):
     if not list:
