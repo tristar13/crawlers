@@ -75,10 +75,10 @@ def extractdata(context, data):
 		#"participants": participants,
 		#"participant": participant
     }
-    org_data = {'fax'}
-	for key, value in org_data()
-		if value = None:
-			print(key,value)
+    
+	for key, value in org_data.items():
+		if value == "":
+			value='----'
 	
     context.emit(data=org_data)
 
