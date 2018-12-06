@@ -77,11 +77,9 @@ def extractdata(context, data):
     }
     
     for key, value in org_data.items():
-      if value == " ":
-           value ='----'
-           newd = {}
-           newd[key]=key
-           newd[value]=value
+		if value is None:
+           value = ''
+           
 	
 	
     context.emit(data=org_data)
