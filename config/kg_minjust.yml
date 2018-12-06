@@ -7,7 +7,7 @@ name: kg_minjust
 description: 'State registry of Kyrgyz legal entities'
 
 # Uncomment to run this scraper automatically:
-schedule: daily
+schedule: monthly
 delay: 1
 stealthy: true
 pipeline:
