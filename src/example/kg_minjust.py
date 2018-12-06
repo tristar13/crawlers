@@ -77,9 +77,9 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-     newdic = {'key':value}
-     newdic[key]
-    #newdic["key"] = "value"
+    newdic = {'key':value}
+    newdic[key]
+    newdic["key"] = "value"
 	
     
     for key, value in org_data.items():
