@@ -77,7 +77,7 @@ def extractdata(context, data):
     }
     
 	for keys, values in org_data.items():
-		if values == "":
+		if values == Null:
 			values ='----'
 	
     context.emit(data=org_data)
