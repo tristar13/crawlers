@@ -81,7 +81,7 @@ def extractdata(context, data):
     #newdic["key"] = "value"
 	
     
-    for key, cell.value in org_data.items():
+    for key, value in org_data.items():
 	    if cell.value is None:
              cell.value = ''
            
