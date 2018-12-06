@@ -9,7 +9,7 @@ def extractdata(context, data):
 
     name_ru = _gettext(page.xpath("//span[contains(text(),'2. П')]/../../following-sibling::td//text()"))
     full_name_kg = _gettext(page.xpath("//span[contains(text(),'1. П')]/../../following-sibling::td//text()"))
-    #short_name_kg = _gettext(page.xpath("//span[contains(text(),'3. С')]/../../following-sibling::td//text()"))
+    short_name_kg = _gettext(page.xpath("//span[contains(text(),'3. С')]/../../following-sibling::td//text()"))
     #short_name_ru = _gettext(page.xpath("//span[contains(text(),'4. С')]/../../following-sibling::td//text()"))
     #legal_form = _gettext(page.xpath("//span[contains(text(),'5. О')]/../../following-sibling::td//text()"))
     #foreign_participation = _gettext(page.xpath("//span[contains(text(),'6. Е')]/../../following-sibling::td//text()"))
@@ -44,7 +44,7 @@ def extractdata(context, data):
         "url": response.url,
         "name_ru": name_ru,
 		"full_name_kg": full_name_kg,
-		#"short_name_kg": short_name_kg,
+		"short_name_kg": short_name_kg,
 		#"short_name_ru": short_name_ru,
 		#"legal_form": legal_form,
 		#"foreign_participation": foreign_participation,
