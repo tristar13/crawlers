@@ -24,8 +24,8 @@ def extractdata(context, data):
     #home = _gettext(page.xpath("//span[contains(text(),'15. ')]/../../following-sibling::td//text()"))
     #appartment = _gettext(page.xpath("//span[contains(text(),'16. ')]/../../following-sibling::td//text()"))
     #phone = _gettext(page.xpath("//span[contains(text(),'17. Т')]/../../following-sibling::td//text()"))
-    #fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td//text()"))
-    fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td"))
+    fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td//text()"))
+    #fax = _gettext(page.xpath("//span[contains(text(),'18. Ф')]/../../following-sibling::td"))
     #mail = _gettext(page.xpath("//span[contains(text(),'19. Э')]/../../following-sibling::td//text()"))
     #Rereg = _gettext(page.xpath("//span[contains(text(),'20. Г')]/../../following-sibling::td//text()"))
     #Date_Order = _gettext(page.xpath("//span[contains(text(),'21. Д')]/../../following-sibling::td//text()"))
@@ -82,9 +82,9 @@ def extractdata(context, data):
     #newdic["key"] = "value"
 	
     
-    #for key, value in org_data.items():
-	 #   if value is None:
-      #       print ("Empty")
+    for key, value in org_data.iteritems():
+	    if value is None:
+             value = ''
            
 	
 	
