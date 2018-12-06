@@ -76,7 +76,7 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-	for key, value in org_data():
+	for key, value in org_data('fax'):
 		if value = ""
 			print(key,value)
 	
