@@ -76,9 +76,9 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-	for key, value in org_data.items():
-		if value == "":
-			value='----'
+	for keys, values in org_data.items():
+		if values == "":
+			values ='----'
 	
     context.emit(data=org_data)
 
