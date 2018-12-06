@@ -78,11 +78,10 @@ def extractdata(context, data):
     
 for key, value in org_data():
  if value == "":
-    	value ='----'
- 
-newd = {}
-newd[key]=key
-newd[value]=value
+      value ='----'
+ newd = {}
+ newd[key]=key
+ newd[value]=value
 	
 	
 context.emit(data=org_data)
