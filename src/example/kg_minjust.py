@@ -76,6 +76,10 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
+	newdic = {}
+	newdic = newdic()
+	newdic ['key']
+	
     for key, value in org_data.items():
 	    if value is None:
              value = ''
