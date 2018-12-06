@@ -77,7 +77,7 @@ def extractdata(context, data):
     }
     
     newdic = {}
-    newdic = newdic()
+    newdic = newdic.dict()
     newdic ['key']
 	
     for key, value in org_data.items():
