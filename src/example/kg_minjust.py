@@ -80,10 +80,10 @@ def extractdata(context, data):
     #newdic = dict()
     #newdic["key"] = "value"
 	
-    unicode(cell.value)
-    for key, value in org_data.items():
+    
+    for key, cell.value in org_data.items():
 	    if cell.value is None:
-             value = ''
+             cell.value = ''
            
 	
 	
