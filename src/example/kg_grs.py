@@ -17,7 +17,6 @@ def extractdata(context, data):
     
     
 	
-	
     context.emit(data=org_data)
 
 def _gettext(list):
