@@ -40,7 +40,7 @@ def extractdata(context, data):
     #participants = _gettext(page.xpath("//span[contains(text(),'31. У')]/../../following-sibling::td//text()"))
     #participant = _gettext(page.xpath("//span[contains(text(),'Учредитель')]/../../following-sibling::td//text()"))
 
-    org_data = {
+    org_data.items = {
         "url": response.url,
         "name_ru": name_ru,
 		"full_name_kg": full_name_kg,
