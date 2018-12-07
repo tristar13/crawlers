@@ -20,8 +20,16 @@ def extractdata(context, data):
         "street": street
     }
 
-
+  
     
+    context.emit(data=org_data)
+
+def _gettext(list):
+    if not list:
+        return list
+    else:
+        return list[0].strip()
+       
     
 for i in range(len('//tbody/tr')):
     result = {}
@@ -33,13 +41,3 @@ for i in range(len('//tbody/tr')):
     district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
     result['street'] = street
     print(result)
-    
-    context.emit(data=org_data)
-
-def _gettext(list):
-    if not list:
-        return list
-    else:
-        return list[0].strip()
-        
-    
