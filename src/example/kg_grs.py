@@ -31,13 +31,13 @@ def _gettext(list):
         return list[0].strip()
        
     
-for i in range(len('//tbody/tr')):
-    result = {}
-    id = _gettext((page.xpath('//tbody/tr/td[2]//p/text()')))
-    street_kg = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
-    street_ru = _gettext((page.xpath('//tbody/tr/td[4]//p/text()')))
-    old_street_kg = _gettext((page.xpath('//tbody/tr/td[5]//p/text()')))
-    old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
-    district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
-    result['street'] = street
-    print(result)
+    for i in range(len('//tbody/tr')):
+        result = {}
+        id = _gettext((page.xpath('//tbody/tr/td[2]//p/text()')))
+        street_kg = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
+        street_ru = _gettext((page.xpath('//tbody/tr/td[4]//p/text()')))
+        old_street_kg = _gettext((page.xpath('//tbody/tr/td[5]//p/text()')))
+        old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
+        district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
+        result['street'] = street
+        print(result)
