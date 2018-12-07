@@ -77,14 +77,18 @@ def extractdata(context, data):
 		#"participant": participant
     }
     
-    newdic = {}
-    newdic
+    
     
 	
-    
+def clean_dict(items):
+    result = {}
     for key, value in org_data.items():
-	    if value is None:
-             value = ''
+	    if value is None or value == '' or value == []:
+             value = '----'
+			 result[key] = value
+		else 
+		     result[key] = items[key]
+	return result
            
 	
 	
