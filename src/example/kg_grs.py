@@ -5,9 +5,9 @@ def extractdata(context, data):
     url = response.url
     page = response.html
     xpath = '//tbody/tr'
-    rows = page.xpath(xpath)
+    
     # Parse the rest of the page to extract structured data.
-
+rows = page.xpath(xpath)
 
 
 
