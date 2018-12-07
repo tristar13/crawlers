@@ -80,14 +80,14 @@ def extractdata(context, data):
     print(org_data)
     
     
-def clean_dict(items):
+def clean_dict(org_data):
     result = {}
     for key, value in org_data.items():
         if value is None or value == '' or value == []:
             value = '----'
             result[key] = value
         else: 
-            result[key] = items[key]
+            result[key] = org_data[key]
         return result
            
            
