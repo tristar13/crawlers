@@ -93,7 +93,7 @@ def clean_dict(items):
            
     
     clean_org_data = clean_dict(org_data)
-    context.emit(data=org_data)
+    context.emit(data=clean_org_data)
 
 def _gettext(list):
     if not list:
