@@ -20,7 +20,7 @@ def extractdata(context, data):
         "street": street
     }
 xpath = '//tbody/tr'
-rows = page.xpath(xpath)
+    rows = page.xpath(xpath)
     
 for i in range(len(rows)):
     result = {}
