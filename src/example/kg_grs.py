@@ -40,6 +40,6 @@ def _gettext(list):
         old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
         district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
         result['street'] = street
-        context.emit(data=org_data)
-        result['data']  = data
+        emit(data=org_data)
+        result['emit']  = emit
         print(result)
