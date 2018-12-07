@@ -20,6 +20,7 @@ def extractdata(context, data):
         "street": street
     }
 
+xpath = '//tbody/tr'
     
     
     for page in range(xpath):
