@@ -9,12 +9,7 @@ def extractdata(context, data):
     # Parse the rest of the page to extract structured data.
 
 
-    street = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
-
-     
     
-    
-
     org_data = {
         "url": response.url,
         "street": street
@@ -40,6 +35,6 @@ def _gettext(list):
         old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
         district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
         result['street'] = street
-        emit(data=org_data)
-        result['emit']  = emit
+        #emit(data=org_data)
+        #result['emit']  = emit
         print(result)
