@@ -4,10 +4,10 @@ def extractdata(context, data):
     response = context.http.rehash(data)
     url = response.url
     page = response.html
-    xpath = '//tbody/tr'
+    
     
     # Parse the rest of the page to extract structured data.
-rows = page.xpath(xpath)
+
 
 
 
@@ -16,8 +16,9 @@ for i in range(len(rows)):
     result = {}
     street = _gettext((page.xpath('//tbody/tr['+str(j)+']/td[3]//p/text()')))
     result['street'] = street
+    context.emit(data=org_data)
     print(result)
-    
+    print(-------------EMIT-------------)
         
     
     
