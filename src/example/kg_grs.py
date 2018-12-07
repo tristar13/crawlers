@@ -16,8 +16,9 @@ for i in range(len(rows)):
     result = {}
     street = _gettext((page.xpath('//tbody/tr['+str(j)+']/td[3]//p/text()')))
     result['street'] = street
-    context.emit(data=org_data)
     print(result)
+    
+    context.emit(data=org_data)
     print(-------------EMIT-------------)
         
     
