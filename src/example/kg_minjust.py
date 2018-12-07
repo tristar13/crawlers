@@ -76,8 +76,10 @@ def extractdata(context, data):
         #"participants": participants,
         #"participant": participant
     }
-    
-    
+    clean_org_data = clean_dict(org_data)
+    print(clean_org_data)
+    context.emit(data=clean_org_data)
+    print('----------Emitend------------')
     
     
 def clean_dict(org_data):
@@ -92,10 +94,8 @@ def clean_dict(org_data):
            
            
     
-        clean_org_data = clean_dict(org_data)
-        print(clean_org_data)
-        context.emit(data=clean_org_data)
-        print('----------Emitend------------')
+        
+        
 
 def _gettext(list):
     if not list:
