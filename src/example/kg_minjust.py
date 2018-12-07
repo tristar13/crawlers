@@ -86,7 +86,7 @@ def clean_dict(items):
 	    if value is None or value == '' or value == []:
              value = '----'
              result[key] = value
-        else 
+        else: 
             result[key] = items[key]
         return result
            
