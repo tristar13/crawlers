@@ -88,14 +88,14 @@ def clean_dict(org_data):
             result[key] = value
         else: 
             result[key] = org_data[key]
-        return result
+    return result
            
            
     
-clean_org_data = clean_dict(org_data)
-print(clean_org_data)
-context.emit(data=clean_org_data)
-print('----------Emitend------------')
+        clean_org_data = clean_dict(org_data)
+        print(clean_org_data)
+        context.emit(data=clean_org_data)
+        print('----------Emitend------------')
 
 def _gettext(list):
     if not list:
