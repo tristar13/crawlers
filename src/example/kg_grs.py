@@ -16,11 +16,11 @@ def extractdata(context, data):
         "street": street
     }
     
-    for key in range(len(street)):
-    value = i+1
-    result = {}
-    result['street'] = street
-    print(result)
+    for i in range(len(street)):
+        j = i+1
+        result = {}
+        result['street'] = street
+        print(result)
     
 	
     context.emit(data=org_data)
