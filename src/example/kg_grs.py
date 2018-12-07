@@ -16,8 +16,8 @@ def extractdata(context, data):
         "street": street
     }
     
-    for i in range(len(street)):
-    j = i+1
+    for key in range(len(street)):
+    value = i+1
     result = {}
     result['street'] = street
     print(result)
