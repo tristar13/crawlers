@@ -8,12 +8,12 @@ def extractdata(context, data):
     # Parse the rest of the page to extract structured data.
 
 xpath = '//tbody/tr'
-rows = tree.xpath(xpath)
+rows = page.xpath(xpath)
 
 for i in range(len(rows)):
     j = i+1
     result = {}
-    street = _gettext((tree.xpath('//tbody/tr['+str(j)+']/td[3]//p/text()')))
+    street = _gettext((page.xpath('//tbody/tr['+str(j)+']/td[3]//p/text()')))
     result['street'] = street
     print(result)
     
