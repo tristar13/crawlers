@@ -12,7 +12,7 @@ def extractdata(context, data):
     
     org_data = {
         "url": response.url,
-        "street": street
+        
     }
 
   
