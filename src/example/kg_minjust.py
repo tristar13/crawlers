@@ -85,10 +85,10 @@ def clean_dict(items):
     for key, value in org_data.items():
 	    if value is None or value == '' or value == []:
             value = '----'
-			result[key] = value
-		else 
-		    result[key] = items[key]
-	return result
+            result[key] = value
+        else 
+            result[key] = items[key]
+        return result
            
 	
 	
