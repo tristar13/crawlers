@@ -22,12 +22,12 @@ def extractdata(context, data):
 xpath = '//tbody/tr'
     rows = page.xpath(xpath)
     
-for i in range(len(rows)):
-    result = {}
-    street = _gettext((tree.xpath('//tbody/tr/td[3]//p/text()')))
-    result['street'] = street
-    print(result)
-    context.emit(data=org_data)
+    for i in range(len(rows)):
+        result = {}
+        street = _gettext((tree.xpath('//tbody/tr/td[3]//p/text()')))
+        result['street'] = street
+        print(result)
+        context.emit(data=org_data)
 
 def _gettext(list):
     if not list:
