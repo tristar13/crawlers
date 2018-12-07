@@ -7,23 +7,12 @@ def extractdata(context, data):
     
     
     # Parse the rest of the page to extract structured data.
-    id = _gettext((page.xpath('//tbody/tr/td[2]//p/text()')))
-    street_kg = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
-    street_ru = _gettext((page.xpath('//tbody/tr/td[4]//p/text()')))
-    old_street_kg = _gettext((page.xpath('//tbody/tr/td[5]//p/text()')))
-    old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
-    district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
+    
 
     
     org_data = {
-        "url": response.url,
-        "id": id,
-        "street_kg": street_kg,
-        "street_ru": street_ru,
-        "old_street_kg": old_street_kg,
-        "old_streetru": old_streetru,
-        "district": district
-    }
+        "url": response.url
+        
 
   
     
@@ -44,7 +33,11 @@ def _gettext(list):
         old_street_kg = _gettext((page.xpath('//tbody/tr/td[5]//p/text()')))
         old_streetru = _gettext((page.xpath('//tbody/tr/td[6]//p/text()')))
         district = _gettext((page.xpath('//tbody/tr/td[7]//p/text()')))
-        result['street'] = street
-        #emit(data=org_data)
-        #result['emit']  = emit
+        result['id'] = id
+        result['street_kg'] = street_kg
+        result['street_ru'] = street_ru
+        result['old_street_kg'] = old_street_kg
+        result['old_streetru']  =  old_streetru
+        result['district'] = district
+        emit(data=org_data) = result 
         print(result)
