@@ -7,7 +7,7 @@ def extractdata(context, data):
 
     # Parse the rest of the page to extract structured data.
 
-for i in range(len(street)):
+for i in range(len(org_data)):
     j = i+1
     result = {}
     result['street'] = street
