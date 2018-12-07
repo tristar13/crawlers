@@ -19,12 +19,12 @@ def extractdata(context, data):
         "url": response.url,
         "street": street
     }
-xpath = '//tbody/tr'
-    rows = page.xpath(xpath)
+
     
-    for i in range(len(rows)):
+    
+    for page in range(xpath):
         result = {}
-        street = _gettext((tree.xpath('//tbody/tr/td[3]//p/text()')))
+        street = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
         result['street'] = street
         print(result)
         context.emit(data=org_data)
