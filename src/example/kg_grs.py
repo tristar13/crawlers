@@ -4,11 +4,12 @@ def extractdata(context, data):
     response = context.http.rehash(data)
     url = response.url
     page = response.html
-
+    xpath = '//tbody/tr'
+    rows = page.xpath(xpath)
     # Parse the rest of the page to extract structured data.
 
-xpath = '//tbody/tr'
-rows = page.xpath(xpath)
+
+
 
 for i in range(len(rows)):
     j = i+1
