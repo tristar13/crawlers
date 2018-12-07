@@ -44,55 +44,55 @@ def extractdata(context, data):
     org_data = {
         "url": response.url,
         "name_ru": name_ru,
-		"full_name_kg": full_name_kg,
-		"short_name_kg": short_name_kg,
-		#"short_name_ru": short_name_ru,
-		#"legal_form": legal_form,
-		#"foreign_participation": foreign_participation,
-		#"registration_number": registration_number,
-		#"okpo": okpo,
-		#"inn": inn,
-		#"region": region,
-		#"district": district,
-		#"city": city,
-		#"microdistr": microdistr,
-		#"street": street,
-		#"home": home,
-		#"appartment": appartment,
-		#"phone": phone,
-		"fax": fax,
-		#"mail": mail,
-		#"Rereg": Rereg,
-		#"Date_Order": Date_Order,
-		#"First_date": First_date,
-		#"Method_of_creating": Method_of_creating,
-		#"Type_of_ownership": Type_of_ownership,
-		#"head_name_sur":head_name_sur,
-		#"main_activity_type": main_activity_type,
-		#"eco_activity_code": eco_activity_code,
-		#"participants_phys_quan": participants_phys_quan,
-		#"participants_jur_quan": participants_jur_quan,
-		#"participants_total": participants_total,
-		#"participants": participants,
-		#"participant": participant
+        "full_name_kg": full_name_kg,
+        "short_name_kg": short_name_kg,
+        #"short_name_ru": short_name_ru,
+        #"legal_form": legal_form,
+        #"foreign_participation": foreign_participation,
+        #"registration_number": registration_number,
+        #"okpo": okpo,
+        #"inn": inn,
+        #"region": region,
+        #"district": district,
+        #"city": city,
+        #"microdistr": microdistr,
+        #"street": street,
+        #"home": home,
+        #"appartment": appartment,
+        #"phone": phone,
+        "fax": fax,
+        #"mail": mail,
+        #"Rereg": Rereg,
+        #"Date_Order": Date_Order,
+        #"First_date": First_date,
+        #"Method_of_creating": Method_of_creating,
+        #"Type_of_ownership": Type_of_ownership,
+        #"head_name_sur":head_name_sur,
+        #"main_activity_type": main_activity_type,
+        #"eco_activity_code": eco_activity_code,
+        #"participants_phys_quan": participants_phys_quan,
+        #"participants_jur_quan": participants_jur_quan,
+        #"participants_total": participants_total,
+        #"participants": participants,
+        #"participant": participant
     }
     
     
     
-	
+    
 def clean_dict(items):
     result = {}
     for key, value in org_data.items():
-	    if value is None or value == '' or value == []:
-             value = '----'
-             result[key] = value
+        if value is None or value == '' or value == []:
+            value = '----'
+            result[key] = value
         else: 
             result[key] = items[key]
         return result
            
-		   
-	
-	
+           
+    
+    
     context.emit(data=org_data)
 
 def _gettext(list):
