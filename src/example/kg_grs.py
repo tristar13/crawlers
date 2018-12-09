@@ -26,4 +26,4 @@ def _gettext(list):
     if not list:
         return list
     else:
-        return list.strip()
+        print(list)
