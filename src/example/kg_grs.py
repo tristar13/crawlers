@@ -14,8 +14,8 @@ def extractdata(context, data):
         "url": response.url,
         "street": street
     }
-    #org_data_dict = dict(org_data)
-    #print (org_data)
+    org_data_dict = dict(org_data)
+    print (org_data)
     
 	
     
@@ -23,8 +23,7 @@ def extractdata(context, data):
 
 
 def _gettext(list):
-    
     if not list:
         return list
-    #else:
-     #   return list[0].strip()
+    else:
+        return list[:].strip()
