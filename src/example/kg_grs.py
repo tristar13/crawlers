@@ -23,7 +23,7 @@ def _gettext(list):
         return list[0].strip()       
     
     
-    for i in range(list('//tbody/tr')):
+    for i in range(len('//tbody/tr')):
         result = {}
         id = _gettext((page.xpath('//tbody/tr/td[2]//p/text()')))
         street_kg = _gettext((page.xpath('//tbody/tr/td[3]//p/text()')))
