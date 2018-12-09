@@ -14,9 +14,11 @@ def extractdata(context, data):
         "url": response.url,
         "street": street
     }
-    
+     org_data_dict = dict(org_data)
+     print (org_data)
     
 	
+    
     context.emit(data=org_data)
 
 def _gettext(list):
