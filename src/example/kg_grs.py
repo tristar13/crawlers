@@ -21,6 +21,8 @@ def extractdata(context, data):
     
     context.emit(data=org_data)
 
+list = map(str.strip, list) 
+
 def _gettext(list):
     if not list:
         return list
