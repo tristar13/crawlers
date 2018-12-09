@@ -14,11 +14,7 @@ def extractdata(context, data):
         "url": response.url
         
         
-def _gettext(list):
-    if not list:
-        return list
-    else:
-        return list[0].strip()
+
        
     
     for i in range(list('//tbody/tr')):
@@ -35,5 +31,11 @@ def _gettext(list):
         result['old_street_kg'] = old_street_kg
         result['old_streetru']  =  old_streetru
         result['district'] = district
-        emit(data=org_data) = result 
+        #emit(data=org_data) = result 
         print(result)
+        
+def _gettext(list):
+    if not list:
+        return list
+    else:
+        return list[0].strip()
