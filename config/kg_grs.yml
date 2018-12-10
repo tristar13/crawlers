@@ -12,6 +12,7 @@ delay: 1
 stealthy: true
 pipeline:
 
+
   init:
     # This first stage will get the ball rolling with a seed URL.
     method: seed
