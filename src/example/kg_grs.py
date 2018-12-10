@@ -14,7 +14,7 @@ def extractdata(context, data):
     }
         
         
-        context.emit(data=org_data)
+        
         
     for i in range(len(streets)):
         street = page.xpath('//tbody/tr['+str(i)+']/td[3]//p/text()')
@@ -23,7 +23,7 @@ def extractdata(context, data):
         else:
             street_str = street
         print (org_data)
-
+        context.emit(data=org_data)
 
 def _gettext(list):
     if not list:
