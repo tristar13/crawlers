@@ -9,8 +9,8 @@ def extractdata(context, data):
 
     streets = page.xpath("//td[3]/div[@class='list-street']/p")
     org_data = {
-            "url": response.url,
-            "street": street_str
+        "url": response.url,
+        "street": street_str
     }
         
         
