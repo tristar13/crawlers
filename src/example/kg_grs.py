@@ -12,7 +12,8 @@ def extractdata(context, data):
         "url": response.url,
         "street": street_str
     }
-        context.emit(data=org_data)     
+    
+    context.emit(data=org_data)     
         
         
         
