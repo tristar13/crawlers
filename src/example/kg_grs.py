@@ -9,6 +9,7 @@ def extractdata(context, data):
 
     streets = page.xpath("//td[3]/div[@class='list-street']/p")
     
+    result=list()
     for i in range(len(streets)):
         street = page.xpath('//tbody/tr['+str(i)+']/td[3]//p/text()')
         if(len(street)> 0):
@@ -19,9 +20,10 @@ def extractdata(context, data):
             "url": response.url,
             "street": street_str
         }
+        result.append(org_data)
         print (org_data)
     
-        context.emit(data=org_data)
+    context.emit(data=result)
 
 
 def _gettext(list):
