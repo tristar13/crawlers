@@ -13,6 +13,8 @@ def extractdata(context, data):
         street = page.xpath('//tbody/tr['+str(i)+']/td[3]//p/text()')
         if(len(street)> 0):
             street_str = street[0]
+        else:
+            street_str = street
         org_data = {
             "url": response.url,
             "street": street_str
