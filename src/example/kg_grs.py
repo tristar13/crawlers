@@ -12,7 +12,7 @@ def extractdata(context, data):
             "url": response.url,
             "street": street_str
         }
-        print (org_data)
+        
         
         context.emit(data=org_data)
         
@@ -22,7 +22,7 @@ def extractdata(context, data):
             street_str = street[0]
         else:
             street_str = street
-        
+        print (org_data)
 
 
 def _gettext(list):
