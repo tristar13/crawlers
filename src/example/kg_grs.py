@@ -20,8 +20,7 @@ def extractdata(context, data):
             "street": street_str
         }
         print (org_data)
-    
-    context.emit(data=org_data)
+        context.emit(data=org_data)
 
 
 def _gettext(list):
