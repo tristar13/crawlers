@@ -10,9 +10,9 @@ def extractdata(context, data):
     streets = page.xpath("//td[3]/div[@class='list-street']/p")
     org_data = {
         "url": response.url,
-        "street": street
+        "street": street_str
     }
-        
+        context.emit(data=org_data)     
         
         
         
@@ -23,10 +23,10 @@ def extractdata(context, data):
         else:
             street_str = street
         print (org_data)
-        context.emit(data=org_data)
+        
 
-def _gettext(list):
-    if not list:
-        return list
-    else:
-        print(list)
+#def _gettext(list):
+ #   if not list:
+  #      return list
+   # else:
+    #    print(list)
