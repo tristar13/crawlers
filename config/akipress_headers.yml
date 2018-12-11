@@ -17,8 +17,8 @@ pipeline:
     method: seed
     params:
       urls:
-        - http://svodka.akipress.org/
-        - http://www.turmush.kg/
+        - http://svodka.akipress.org/news/
+        #- http://www.turmush.kg/
         
     handle:
       pass: fetch
