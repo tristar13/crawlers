@@ -11,7 +11,7 @@ def extractdata(context, data):
     header1 = _gettext(page.xpath('//div[@class]/h1/text()'))
     #header2 = _gettext(page.xpath('//div[@class='news_body']/h1[@class='newsheadline_title']/text()'))
     #header3 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/text()'))
-    foto = _gettext(page.xpath('//div[@class='cast_elem_content']/div/img/@src'))
+    foto = _gettext(page.xpath('//div[@class]/img/@src'))
     #foto2 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/div[@class='photoin']/img/@src'))
 
 
@@ -20,7 +20,7 @@ def extractdata(context, data):
         "header1": header1,
         #"header2": header2,
         #"header3": header3,
-        #"foto": foto,
+        "foto": foto
         #"foto2":  foto2
     }
 
