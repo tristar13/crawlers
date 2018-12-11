@@ -17,7 +17,7 @@ pipeline:
     method: seed
     params:
       urls:
-        - http://svodka.akipress.org/news/
+        - http://svodka.akipress.org/
         #- http://www.turmush.kg/
         
     handle:
@@ -33,7 +33,7 @@ pipeline:
           - pattern: 'http://svodka.akipress.org/news/'
           #- pattern: 'http://www.turmush.kg/ru/news/'
           #- pattern: 'http://www.turmush.kg/news/'
-          #- pattern: 'http://svodka.akipress.org/$'
+          - pattern: 'http://svodka.akipress.org/$'
           #- pattern: 'http://www.turmush.kg/$'
         
     handle:
