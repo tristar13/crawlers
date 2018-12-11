@@ -34,7 +34,7 @@ pipeline:
           - pattern: 'http://www.turmush.kg/news/'
           - pattern: 'http://svodka.akipress.org/$'
           - pattern: 'http://www.turmush.kg/$'
-          - pattern: 'http://akipress.org/'
+        
     handle:
       pass: parse
 
