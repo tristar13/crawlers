@@ -9,11 +9,14 @@ def extractdata(context, data):
 
 
     header = _gettext(page.xpath('.//div/h2/text()'))
-	
-
+    foto = _gettext(page.xpath('//div[@class]/img[@class]/@src'))
+    date= _gettext(page.xpath('//div/div[3]/span[1]'))
+    
     article_data = {
         "url": response.url,
         "header": header,
+        "foto": foto,
+        "date": date
 	  }
 
 
