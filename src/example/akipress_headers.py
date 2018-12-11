@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import re
 
-=======
->>>>>>> ce447570fec0988c10acb7ca34eced58c5db1f51
 def extractdata(context, data):
     # This stage comes after 'fetch' so the 'data' input contains an
     # HTTPResponse object.
