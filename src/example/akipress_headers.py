@@ -24,7 +24,7 @@ def extractdata(context, data):
         #"foto2":  foto2
     }
 
-    if article_data["header1", "foto"] is not None:
+    if article_data["header1"] is not None:
         # If 'rule' is not set, it defaults to 'pass', which triggers the
         # final 'store' stage.
         context.emit(data=article_data)
