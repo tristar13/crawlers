@@ -8,7 +8,7 @@ def extractdata(context, data):
 
     # Parse the rest of the page to extract structured data.
 
-    header1 = _gettext(page.xpath('//div[@class='news_in news_in1']/h1/text()'))
+    header1 = _gettext(page.xpath('//div[@class='content']/div[@class]/h1/text()'))
     #header2 = _gettext(page.xpath('//div[@class='news_body']/h1[@class='newsheadline_title']/text()'))
     #header3 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/text()'))
     foto = _gettext(page.xpath('//div[@class='cast_elem_content']/div/img/@src'))
