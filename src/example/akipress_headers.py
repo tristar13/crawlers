@@ -13,19 +13,19 @@ def extractdata(context, data):
     # Parse the rest of the page to extract structured data.
 
     header1 = _gettext(page.xpath('//div[@class='news_in news_in1']/h1/text()'))
-    header2 = _gettext(page.xpath('//div[@class='news_body']/h1[@class='newsheadline_title']/text()'))
-    header3 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/text()'))
+    #header2 = _gettext(page.xpath('//div[@class='news_body']/h1[@class='newsheadline_title']/text()'))
+    #header3 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/text()'))
     foto = _gettext(page.xpath('//div[@class='cast_elem_content']/div/img/@src'))
-    foto2 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/div[@class='photoin']/img/@src'))
+    #foto2 = _gettext(page.xpath('//div[@class='area_block']/div[@class='news_body']/div[@class='photoin']/img/@src'))
 
 
     article_data = {
         "url": response.url,
         "header1": header1,
-        "header2": header2,
-        "header3": header3,
-        "foto": foto,
-        "foto2":  foto2
+        #"header2": header2,
+        #"header3": header3,
+        #"foto": foto,
+        #"foto2":  foto2
     }
 
     if article_data["header1", "header2", "header3", "foto", "foto2"] is not None:
