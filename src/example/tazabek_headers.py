@@ -10,17 +10,17 @@ def extractdata(context, data):
 
     header = _gettext(page.xpath('.//div/h2/text()'))
     foto = _gettext(page.xpath('//div[@class]/img[@class]/@src'))
-    date= _gettext(page.xpath('//div/div[3]/span[1]'))
+    #date= _gettext(page.xpath('//div/div[3]/span[1]'))
     
     article_data = {
         "url": response.url,
         "header": header,
         "foto": foto,
-        "date": date
+        #"date": date
 	  }
 
 
-    if article_data['header', 'foto', 'date'] is not None:
+    if article_data["header"] is not None:
         # If 'rule' is not set, it defaults to 'pass', which triggers the
         # final 'store' stage.
         context.emit(data=article_data)
