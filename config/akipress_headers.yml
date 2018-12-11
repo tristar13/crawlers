@@ -44,8 +44,8 @@ pipeline:
     params:
       store:
         and:
-          - pattern: 'http://svodka.akipress.org/'
-          - pattern: 'http://www.turmush.kg'
+          - pattern: 'http://akipress.org/'
+         
           
     handle:
       # this makes it a recursive web crawler:
