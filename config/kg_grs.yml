@@ -53,6 +53,4 @@ pipeline:
     method: db
     params:
       table: "kg_grs"
-      unique:
-        - url
         
