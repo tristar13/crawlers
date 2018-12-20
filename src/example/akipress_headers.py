@@ -5,7 +5,7 @@ def extractdata(context, data):
     response = context.http.rehash(data)
     url = response.url
     page = response.html
-
+    print(response)
     # Parse the rest of the page to extract structured data.
 
     header1 = _gettext(page.xpath('//div[@class]/h1/text()'))
