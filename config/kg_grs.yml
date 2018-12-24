@@ -16,7 +16,7 @@ pipeline:
 # Scraper for the OCCRP web site.
 # The goal is not to download all HTML, but only PDFs & other documents
 # linked from the page as proof.
-name: adres_grs
+name: kg_grs
 
 # A title for display in the UI:
 description: 'streets from grs'
