@@ -13,12 +13,26 @@ stealthy: true
 pipeline:
 
 
+# Scraper for the OCCRP web site.
+# The goal is not to download all HTML, but only PDFs & other documents
+# linked from the page as proof.
+name: adres_grs
+
+# A title for display in the UI:
+description: 'streets from grs'
+
+# Uncomment to run this scraper automatically:
+schedule: monthly
+delay: 1
+stealthy: true
+pipeline:
+
   init:
     # This first stage will get the ball rolling with a seed URL.
     method: seed
     params:
       urls:
-        - http://address.darek.gosreg.kg/#
+        - http://address.darek.gosreg.kg/search/street/4948?filter=ate&page=1&streetType=0
     handle:
       pass: fetch
 
@@ -28,29 +42,28 @@ pipeline:
     params:
       # These rules specify which pages should be scraped or included:
       rules:
-        and:
-          - domain: http://address.darek.gosreg.kg/
+        or:
+          - pattern: 'http://address.darek.gosreg.kg/'
     handle:
       pass: parse
 
   parse:
     # Parse the scraped pages to find if they contain additional links.
-    method: example.kg_grs_parse:parse
+    method: example.adres_grs:extractdata
+    params:
+      store:
+        and:
+          - pattern: 'http://address.darek.gosreg.kg/'
+          
     handle:
       # this makes it a recursive web crawler:
-      store: extractdata
+      store: store
       fetch: fetch
-  
-  extractdata:
-    # Parse the scraped pages to extract useful information
-    method: example.kg_grs:extractdata
-    handle:
-      pass: store
-
 
   store:
     # Store the crawled documents to a directory
     method: db
     params:
-      table: "kg_grs"
-        
+      table: "grs"
+      unique:
+        - id_street
