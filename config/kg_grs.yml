@@ -49,7 +49,7 @@ pipeline:
 
   parse:
     # Parse the scraped pages to find if they contain additional links.
-    method: example.adres_grs:extractdata
+    method: example.kg_grs:extractdata
     params:
       store:
         and:
