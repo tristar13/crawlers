@@ -28,12 +28,12 @@ pipeline:
       # These rules specify which pages should be scraped or included:
       rules:
         or:
-          - pattern: 'http://kg.akipress.org/'
-          - pattern: 'http://bilim.akipress.org/ru'
+          - pattern: 'http://kg.akipress.org/$'
+          - pattern: 'http://bilim.akipress.org/ru/$'
           
         
-    handle:
-      pass: parse
+    #handle:
+     # pass: parse
 
   #parse:
     # Parse the scraped pages to find if they contain additional links.
