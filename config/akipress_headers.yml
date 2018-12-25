@@ -30,6 +30,7 @@ pipeline:
         or:
           - pattern: 'http://kg.akipress.org/$'
           - pattern: 'http://bilim.akipress.org/ru/$'
+          - pattern: 'http://akipress.org/'
           
         
     #handle:
