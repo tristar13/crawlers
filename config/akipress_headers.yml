@@ -17,9 +17,7 @@ pipeline:
     method: seed
     params:
       urls:
-        - http://svodka.akipress.org/
-        #- http://www.turmush.kg/
-        
+        - http://akipress.org/
     handle:
       pass: fetch
 
@@ -30,22 +28,20 @@ pipeline:
       # These rules specify which pages should be scraped or included:
       rules:
         or:
-          - pattern: 'http://svodka.akipress.org/news/'
-          #- pattern: 'http://www.turmush.kg/ru/news/'
-          #- pattern: 'http://www.turmush.kg/news/'
-          - pattern: 'http://svodka.akipress.org/$'
-          #- pattern: 'http://www.turmush.kg/$'
+          - pattern: 'http://kg.akipress.org/'
+          - pattern: 'http://bilim.akipress.org/ru'
+          
         
     handle:
       pass: parse
 
-  parse:
+  #parse:
     # Parse the scraped pages to find if they contain additional links.
-    method: parse
-    params:
-      store:
-        and:
-          - pattern: 'http://svodka.akipress.org/news/'
+    #method: parse
+    #params:
+      #store:
+        #and:
+          #- pattern: 'http://svodka.akipress.org/news/'
           #- pattern: 'http://www.turmush.kg/ru/news/'
           #- pattern: 'http://www.turmush.kg/news/'
          
